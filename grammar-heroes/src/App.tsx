@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Download from './Components/Download';
+import LandingPage from './Components/LandingPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -18,7 +21,9 @@ function App() {
         >
           Grammar Heroes
         </a>
+        <LandingPage />
       </header>
+
     </div>
   );
 }
