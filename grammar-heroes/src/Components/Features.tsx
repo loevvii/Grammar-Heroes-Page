@@ -1,32 +1,48 @@
 import React from "react";
-import { Container, Row, Col, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import icon from "../assets/images/icon.png";
 
 const Features = () => {
+  const features = [
+    {
+      id: 1,
+      image: icon,
+      title: "Card-Based Gameplay",
+      description: "Engage in strategic card battles designed to teach grammar concepts."
+    },
+    {
+      id: 2,
+      image: icon,
+      title: "Sentence Verification Via BKT and T5",
+      description: "Advanced AI algorithms verify sentence correctness in real-time."
+    },
+    {
+      id: 3,
+      image: icon,
+      title: "Rich Visuals and Sounds",
+      description: "Immersive graphics and audio create an engaging learning experience."
+    }
+  ];
+
   return (
     <Container className="features-section">
-      <Row className="align-items-center">
-        <Col md={6} className="features-left">
-          <Carousel>
-            <Carousel.Item>
-              <img className="d-block w-100 h-100" src={icon} alt="Feature 1" style={{ objectFit: "cover" }} />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img className="d-block w-100 h-100" src={icon} alt="Feature 2" style={{ objectFit: "cover" }} />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img className="d-block w-100 h-100" src={icon} alt="Feature 3" style={{ objectFit: "cover" }} />
-            </Carousel.Item>
-          </Carousel>
-        </Col>
-        <Col md={6} className="features-right">
-          <h2>Features</h2>
-          <ul>
-            <li>Card-Based Gameplay</li>
-            <li>Sentence Verification Via BKT and T5</li>
-            <li>Rich Visuals and Sounds</li>
-          </ul>
-        </Col>
+      <Row className="g-4">
+        {features.map((feature) => (
+          <Col md={4} key={feature.id}>
+            <Card className="feature-card">
+              <div className="feature-image-wrapper">
+                <Card.Img variant="top" src={feature.image} alt={feature.title} />
+                <div className="feature-overlay"></div>
+              </div>
+              <Card.Body>
+                <div className="feature-meta">
+                </div>
+                <Card.Title>{feature.title}</Card.Title>
+                <Card.Text>{feature.description}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </Container>
   );
