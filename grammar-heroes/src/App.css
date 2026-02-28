@@ -1,5 +1,79 @@
-.App {
+
+.logo {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+.landing-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 0;
+}
+
+.video-background iframe {
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.77vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78%;
+  background: rgba(48, 79, 145, 0.5);
+  z-index: 1;
+}
+.content-layer {
   text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.landing-header {
+  position: relative;
+  z-index: 1;
+}
+
+.App {
+  text-align: left;
+  font-family: 'RedHatDisplay', sans-serif;
 }
 
 .App-logo {
@@ -14,7 +88,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,6 +102,11 @@
   color: #61dafb;
 }
 
+.main-logo {
+  border-radius: 15%;
+  width: auto;
+  height: auto;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +114,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+@font-face {
+  font-family: 'RedHatDisplay';
+ src: url('./assets/fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
 }
