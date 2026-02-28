@@ -21,10 +21,10 @@ const LandingPage = () => {
           <img src={logo} alt="Grammar Heroes Logo" className="main-logo" />
           
           <p className="sub-tagline">
-            GRAMMAR HEROES — Master English grammar through an adventure through grammatica!
+            GRAMMAR HEROES — Master English grammar with Typo through an adventure through grammatica!
           </p>
 
-          <button type="button" className="btn btn-outline-primary btn-large">
+          <button type="button" className="btn btn-primary btn-large">
             Download Now!
           </button>
         </div>

@@ -71,9 +71,23 @@
   z-index: 1;
 }
 
+/* Features section styling */
+.features-section {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.features-left,
+.features-right {
+  height: 100%;
+}
+
 .App {
   text-align: left;
   font-family: 'RedHatDisplay', sans-serif;
+  stroke: #000000 5px;
 }
 
 .App-logo {
@@ -107,6 +121,13 @@
   width: auto;
   height: auto;
 }
+.navbar-logo {
+  width: 20%;
+}
+
+.features-section {
+  color: black;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -117,5 +138,16 @@
 }
 @font-face {
   font-family: 'RedHatDisplay';
- src: url('./assets/fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+  src: url('./assets/fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+#home,
+#features,
+#trailer,
+#download {
+  padding-bottom: 60px;
 }
